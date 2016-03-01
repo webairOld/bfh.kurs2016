@@ -6,8 +6,52 @@
 //  Copyright © 2016 BFH. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 
-class ListBuzzwordsViewController: UIViewController {
+protocol BuzzwordStore {
+    func createBuzzword(word:String)
+    func allBuzzwords() -> [Buzzword]
+    func saveBuzzword(buzzword: Buzzword)
+}
 
+class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+
+    @IBOutlet var buzzwordsTableView: UITableView!
+    
+    var store: BuzzwordStore = InMemoryBuzzwordStore()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.buzzwordsTableView.dataSource = self
+        self.buzzwordsTableView.delegate  = self
+        
+        self.store.createBuzzword("HTML 5")
+        self.store.createBuzzword("Responsive Design")
+        self.store.createBuzzword("Docker")
+        self.store.createBuzzword("J2EE")
+        
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.store.allBuzzwords().count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: nil)
+        let buzzword = self.store.allBuzzwords()[indexPath.row]
+        cell.textLabel?.text = buzzword.name
+        cell.detailTextLabel?.text = "\(buzzword.count)"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let buzzword = self.store.allBuzzwords()[indexPath.row]
+        let incrementedBuzzword = buzzword.incrementCount()
+        self.store.saveBuzzword(incrementedBuzzword)
+        self.buzzwordsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+    }
+    
 }

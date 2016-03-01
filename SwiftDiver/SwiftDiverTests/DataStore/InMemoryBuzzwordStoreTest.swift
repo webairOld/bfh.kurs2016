@@ -8,28 +8,41 @@
 
 import XCTest
 
+@testable
+import SwiftDiver
+
 class InMemoryBuzzwordStoreTest: XCTestCase {
+    let sut = InMemoryBuzzwordStore()
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testCreateBuzzword() {
+        sut.createBuzzword("HTML5")
+        
+        XCTAssertEqual(sut.allBuzzwords().count, 1)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testCreateBuzzword_InitialValues() {
+        sut.createBuzzword("HTML 5")
+        
+        XCTAssertEqual(sut.allBuzzwords()[0].id, 1)
+        XCTAssertEqual(sut.allBuzzwords()[0].name, "HTML 5")
+        XCTAssertEqual(sut.allBuzzwords()[0].count, 0)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCreateBuzzword_IncrementIds() {
+        sut.createBuzzword("HTML 5")
+        sut.createBuzzword("Responsive Design")
+        
+        XCTAssertEqual(sut.allBuzzwords()[0].id, 1)
+        XCTAssertEqual(sut.allBuzzwords()[1].id, 2)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testSaveBuzzword_IncrementCount() {
+        sut.createBuzzword("HTML 5")
+        let incrementedBuzzword = sut.allBuzzwords()[0].incrementCount()
+        
+        sut.saveBuzzword(incrementedBuzzword)
+        
+        XCTAssertEqual(sut.allBuzzwords()[0].count, 1)
     }
     
 }

@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct Buzzword {
+    let id:Int
+    let name:String
+    let count:Int
+    
+    func incrementCount() -> Buzzword {
+        return Buzzword(id:self.id, name:self.name, count: self.count+1)
+    }
+}
+
