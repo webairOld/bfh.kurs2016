@@ -1,11 +1,10 @@
 # SwiftDiver Example
 
-Implement the InMemoryBuzzwordStore, so that the app works as expected
+Implement the InMemoryBuzzwordStore, so that the app works as expected. Use Unit Tests to guide you through the implementation (uncomment test one by one)
 
 ## Keywords
-- let / var
-- func
-- struct / class / protocol
+- contants / variables / functions
+- structures / classes / protocols
 - Collections / Generics
 - XCTest
 

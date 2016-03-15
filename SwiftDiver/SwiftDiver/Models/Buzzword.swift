@@ -14,7 +14,7 @@ struct Buzzword {
     let count:Int
     
     func incrementCount() -> Buzzword {
-        return Buzzword(id:self.id, name:self.name, count: self.count+1)
+        return Buzzword(id:0, name:"Any", count:-1)
     }
 }
 
