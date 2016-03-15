@@ -35,7 +35,8 @@ class InMemoryBuzzwordStoreTest: XCTestCase {
 //        XCTAssertEqual(sut.allBuzzwords()[0].id, 1)
 //        XCTAssertEqual(sut.allBuzzwords()[1].id, 2)
 //    }
-//    
+//
+// implement incrementCount first -> see BuzzwordTest.swift
 //    func testSaveBuzzword_IncrementCount() {
 //        sut.createBuzzword("HTML 5")
 //        let incrementedBuzzword = sut.allBuzzwords()[0].incrementCount()
