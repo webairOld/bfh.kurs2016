@@ -86,7 +86,7 @@
                                     <action selector="tappedSave:" destination="8aZ-8d-uVe" eventType="touchUpInside" id="mAe-Dx-Cgs"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EK4-mR-PQX">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EK4-mR-PQX" customClass="BorderedTextView" customModule="Buzzword" customModuleProvider="target">
                                 <rect key="frame" x="19" y="58" width="561" height="61"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
