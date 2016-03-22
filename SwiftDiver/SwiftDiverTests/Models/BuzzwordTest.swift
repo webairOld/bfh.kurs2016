@@ -13,12 +13,12 @@ import SwiftDiver
 
 class BuzzwordTest: XCTestCase {
     
-//    func testIncrementCount() {
-//        let buzzword = Buzzword(id:1, name:"Any", count:0)
-//        
-//        let incrementedBuzzword = buzzword.incrementCount()
-//        
-//        XCTAssertEqual(incrementedBuzzword.count, 1)
-//    }
+    func testIncrementCount() {
+        let buzzword = Buzzword(id:1, name:"Any", count:0)
+        
+        let incrementedBuzzword = buzzword.incrementCount()
+        
+        XCTAssertEqual(incrementedBuzzword.count, 1)
+    }
     
 }
