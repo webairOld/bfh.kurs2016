@@ -30,7 +30,7 @@
                                 </constraints>
                                 <state key="normal" title="Add"/>
                                 <connections>
-                                    <segue destination="8aZ-8d-uVe" kind="presentation" identifier="AddBuzzword" id="QqI-56-B4K"/>
+                                    <action selector="addBuzzword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJu-ab-u6m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="buzzwordsTableView" destination="cau-Vy-YmG" id="F6o-vI-TGi"/>
+                        <segue destination="8aZ-8d-uVe" kind="presentation" identifier="AddBuzzword" id="3PS-E8-5mx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
