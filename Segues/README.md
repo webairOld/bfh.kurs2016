@@ -8,6 +8,14 @@ Implement the AddBuzzwordViewController so that:
 - if the user tappes the cancel button the ViewController gets dismissed
 - if the user tappes the save button, the content of the textview gets added to the store, and the viewcontroller gets dismissed
 
+## Perform segue 
+Remove the segue from the add button and add a segue between the view controllers. 
+
+Implement the ListBuzzwordViewController so that:
+
+- if user tappes the add button, the segue gets performed programtically
+ 
+
 ## Keywords
 - Storyboard / Segues
 - UIButton / IBAction / IBOutlet
