@@ -8,16 +8,15 @@ Implement the AddBuzzwordViewController so that:
 - if the user tappes the cancel button the ViewController gets dismissed
 - if the user tappes the save button, the content of the textview gets added to the store, and the viewcontroller gets dismissed
 
-
-
-
 ## Keywords
 - Storyboard / Segues
 - UIButton / IBAction / IBOutlet
+- Type Casting
 
 
 ## Inputs
 - [Segues - Passing Data](http://jamesleist.com/ios-swift-passing-data-between-viewcontrollers/)
 - [Connect the UI to Code](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson3.html)
+- [Swift Type Casting](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html)
 
 
