@@ -53,5 +53,4 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
         self.store.saveBuzzword(incrementedBuzzword)
         self.buzzwordsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
     }
-    
 }
