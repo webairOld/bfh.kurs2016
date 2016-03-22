@@ -24,12 +24,10 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
         super.viewDidLoad()
         self.buzzwordsTableView.dataSource = self
         self.buzzwordsTableView.delegate  = self
-        
-//        self.store.createBuzzword("HTML 5")
-//        self.store.createBuzzword("Responsive Design")
-//        self.store.createBuzzword("Docker")
-//        self.store.createBuzzword("J2EE")
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.buzzwordsTableView.reloadData()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
