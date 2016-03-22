@@ -53,4 +53,11 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
         self.store.saveBuzzword(incrementedBuzzword)
         self.buzzwordsTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddBuzzword" {
+            let addController = segue.destinationViewController as! AddBuzzwordViewController
+            addController.store = self.store
+        }
+    }
 }
