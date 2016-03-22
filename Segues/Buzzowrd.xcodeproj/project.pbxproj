@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */; };
 		03D1DF721CA1A38800DCF489 /* AddBuzzwordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF711CA1A38800DCF489 /* AddBuzzwordViewController.swift */; };
+		03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF7A1CA1B76C00DCF489 /* BorderedTextView.swift */; };
 		03D232031CA19D4300DA7B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D231F61CA19D4300DA7B4F /* AppDelegate.swift */; };
 		03D232041CA19D4300DA7B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D231F71CA19D4300DA7B4F /* Assets.xcassets */; };
 		03D232051CA19D4300DA7B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D231F81CA19D4300DA7B4F /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 		03AC147C1C85F39800C156A3 /* BuzzwordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzwordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBuzzwordsViewController.swift; sourceTree = "<group>"; };
 		03D1DF711CA1A38800DCF489 /* AddBuzzwordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBuzzwordViewController.swift; sourceTree = "<group>"; };
+		03D1DF7A1CA1B76C00DCF489 /* BorderedTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedTextView.swift; sourceTree = "<group>"; };
 		03D231F61CA19D4300DA7B4F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03D231F71CA19D4300DA7B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03D231F91CA19D4300DA7B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		03AC145F1C85F39800C156A3 = {
 			isa = PBXGroup;
 			children = (
+				03D1DF781CA1B76C00DCF489 /* Common */,
 				03D231F51CA19D4300DA7B4F /* Buzzword */,
 				03D2320B1CA19D4D00DA7B4F /* BuzzwordTests */,
 				03AC14691C85F39800C156A3 /* Products */,
@@ -105,6 +108,23 @@
 				03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */,
 			);
 			path = ListBuzzwords;
+			sourceTree = "<group>";
+		};
+		03D1DF781CA1B76C00DCF489 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				03D1DF791CA1B76C00DCF489 /* Views */,
+			);
+			name = Common;
+			path = Buzzword/Common;
+			sourceTree = "<group>";
+		};
+		03D1DF791CA1B76C00DCF489 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03D1DF7A1CA1B76C00DCF489 /* BorderedTextView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		03D231F51CA19D4300DA7B4F /* Buzzword */ = {
@@ -269,6 +289,7 @@
 				03D2320A1CA19D4300DA7B4F /* Buzzword.swift in Sources */,
 				03D232071CA19D4300DA7B4F /* InMemoryBuzzwordStore.swift in Sources */,
 				03D232031CA19D4300DA7B4F /* AppDelegate.swift in Sources */,
+				03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */,
 				03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
