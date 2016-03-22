@@ -48,23 +48,5 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Add Buzzword View Controller-->
-        <scene sceneID="ewJ-MM-Sp5">
-            <objects>
-                <viewController id="8aZ-8d-uVe" customClass="AddBuzzwordViewController" customModule="Buzzword" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jgw-DX-G6w"/>
-                        <viewControllerLayoutGuide type="bottom" id="CSi-lX-zja"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="u8c-Sx-Lu3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dTL-US-vXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1039" y="355"/>
-        </scene>
     </scenes>
 </document>

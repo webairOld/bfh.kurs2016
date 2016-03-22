@@ -27,5 +27,3 @@ Implement the ListBuzzwordViewController so that:
 - [Segues - Passing Data](http://jamesleist.com/ios-swift-passing-data-between-viewcontrollers/)
 - [Connect the UI to Code](https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson3.html)
 - [Swift Type Casting](https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/TypeCasting.html)
-
-
