@@ -1,5 +1,5 @@
 # Segue Example
-Add a new ViewController in the Storyboard and set it up to work with the AddBuzzwordViewController. Add Elements to enter a text (TextView), a cancel button and a save button. 
+Add a new ViewController in the Storyboard and set it up to work with the AddBuzzwordViewController. Add Elements to enter a text (TextView with "BorderedTextView" as custom calss), a cancel button and a save button. 
 
 Connect a segue between the ListBuzzwordViewController AddButton and the new AddBuzzwordViewController so that the new AddBuzzwordViewController gets displayed. Make sure that the Buzzword store get set when performing the segue (see "Segues - Passing Data").
 
@@ -8,8 +8,17 @@ Implement the AddBuzzwordViewController so that:
 - if the user tappes the cancel button the ViewController gets dismissed
 - if the user tappes the save button, the content of the textview gets added to the store, and the viewcontroller gets dismissed
 
+## Perform segue 
+Remove the segue from the add button and add a segue between the view controllers. 
+
+Implement the ListBuzzwordViewController so that:
+
+- if user tappes the add button, the segue gets performed programtically
+ 
+
 ## Keywords
 - Storyboard / Segues
+- Custom View Class
 - UIButton / IBAction / IBOutlet
 - Type Casting
 
