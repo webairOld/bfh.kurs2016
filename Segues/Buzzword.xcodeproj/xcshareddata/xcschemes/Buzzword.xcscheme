@@ -17,7 +17,7 @@
                BlueprintIdentifier = "03AC14671C85F39800C156A3"
                BuildableName = "Buzzword.app"
                BlueprintName = "Buzzword"
-               ReferencedContainer = "container:Buzzowrd.xcodeproj">
+               ReferencedContainer = "container:Buzzword.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "03AC147B1C85F39800C156A3"
                BuildableName = "BuzzwordTests.xctest"
                BlueprintName = "BuzzwordTests"
-               ReferencedContainer = "container:Buzzowrd.xcodeproj">
+               ReferencedContainer = "container:Buzzword.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
                BlueprintIdentifier = "03AC147B1C85F39800C156A3"
                BuildableName = "BuzzwordTests.xctest"
                BlueprintName = "BuzzwordTests"
-               ReferencedContainer = "container:Buzzowrd.xcodeproj">
+               ReferencedContainer = "container:Buzzword.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -60,7 +60,7 @@
             BlueprintIdentifier = "03AC14671C85F39800C156A3"
             BuildableName = "Buzzword.app"
             BlueprintName = "Buzzword"
-            ReferencedContainer = "container:Buzzowrd.xcodeproj">
+            ReferencedContainer = "container:Buzzword.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,7 +83,7 @@
             BlueprintIdentifier = "03AC14671C85F39800C156A3"
             BuildableName = "Buzzword.app"
             BlueprintName = "Buzzword"
-            ReferencedContainer = "container:Buzzowrd.xcodeproj">
+            ReferencedContainer = "container:Buzzword.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,16 +95,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03AC14671C85F39800C156A3"
             BuildableName = "Buzzword.app"
             BlueprintName = "Buzzword"
-            ReferencedContainer = "container:Buzzowrd.xcodeproj">
+            ReferencedContainer = "container:Buzzword.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
