@@ -29,6 +29,9 @@
                                     <constraint firstAttribute="height" constant="30" id="386-z9-mhQ"/>
                                 </constraints>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="tappedAddBuzzword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGx-cR-bh2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -47,6 +50,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--AddBuzzword-->
+        <scene sceneID="C0E-Sm-OP2">
+            <objects>
+                <viewController storyboardIdentifier="AddBuzzword" title="AddBuzzword" id="xIS-rj-hUr" customClass="AddBuzzwordViewController" customModule="Buzzword" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aT-dC-u15"/>
+                        <viewControllerLayoutGuide type="bottom" id="LkT-A6-pXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xLy-g5-Lho">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQn-T8-PT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="351"/>
         </scene>
     </scenes>
 </document>
