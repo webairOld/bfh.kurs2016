@@ -14,6 +14,13 @@ Remove the segue from the add button and add a segue between the view controller
 Implement the ListBuzzwordViewController so that:
 
 - if user tappes the add button, the segue gets performed programtically
+
+## Without segue 
+Remove the segue from the previous example. Add an identifier to the 'AddBuzzwordViewController'. 
+
+Implement the ListBuzzwordViewController so that:
+
+- if user tappes the add button, 'AddBuzzwordViewController' gets initialized from the storyboard and the store presented without the segue. Do not forget to set the store.
  
 
 ## Keywords
