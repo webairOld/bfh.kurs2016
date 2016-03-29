@@ -31,8 +31,9 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
     }
     
     @IBAction func tappedAddBuzzword(sender: AnyObject) {
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("AddBuzzword")
-        self.presentViewController(viewController, animated: true, completion: nil);
+        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("AddBuzzword") as! AddBuzzwordViewController
+        viewController.store = self.store
+        self.presentViewController(viewController, animated: true, completion: nil)
         
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

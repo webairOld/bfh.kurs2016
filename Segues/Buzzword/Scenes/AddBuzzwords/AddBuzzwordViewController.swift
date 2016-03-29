@@ -12,6 +12,7 @@ class AddBuzzwordViewController: UIViewController {
     
     var store: BuzzwordStore!
 
+    @IBOutlet var textField: BorderedTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -20,4 +21,12 @@ class AddBuzzwordViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func tappedCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func tappedSave(sender: AnyObject) {
+        self.store.createBuzzword(textField.text)
+        self.tappedCancel(sender)
+    }
+    
 }

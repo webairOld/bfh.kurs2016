@@ -59,11 +59,56 @@
                         <viewControllerLayoutGuide type="top" id="8aT-dC-u15"/>
                         <viewControllerLayoutGuide type="bottom" id="LkT-A6-pXc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xLy-g5-Lho">
+                    <view key="view" contentMode="scaleToFill" id="Zwg-W2-yxe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-b0-ADX">
+                                <rect key="frame" x="19" y="28" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hbs-Wk-aJ4"/>
+                                    <constraint firstAttribute="width" constant="48" id="yvA-L7-YcV"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="tappedCancel:" destination="xIS-rj-hUr" eventType="touchUpInside" id="XJv-fE-esv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-ta-aho">
+                                <rect key="frame" x="539" y="28" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Ilh-2M-F4k"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rs1-EC-dxN"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="tappedSave:" destination="xIS-rj-hUr" eventType="touchUpInside" id="asn-xA-ZBa"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bws-60-248" customClass="BorderedTextView" customModule="Buzzword" customModuleProvider="target">
+                                <rect key="frame" x="19" y="70" width="561" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Zms-dQ-UYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cK7-ta-aho" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="8" id="3Sz-ac-ePe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bws-60-248" secondAttribute="trailing" id="5Ce-dQ-QDP"/>
+                            <constraint firstItem="Srq-b0-ADX" firstAttribute="leading" secondItem="Zwg-W2-yxe" secondAttribute="leadingMargin" constant="-1" id="JXl-2C-oEy"/>
+                            <constraint firstItem="bws-60-248" firstAttribute="leading" secondItem="Zwg-W2-yxe" secondAttribute="leadingMargin" constant="-1" id="QMQ-ip-NeD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cK7-ta-aho" secondAttribute="trailing" constant="7" id="wbt-ge-Nhu"/>
+                            <constraint firstItem="bws-60-248" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="50" id="xgX-tT-jq8"/>
+                            <constraint firstItem="Srq-b0-ADX" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="8" id="ymJ-0n-DmY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="bws-60-248" id="hqd-6c-s4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQn-T8-PT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
