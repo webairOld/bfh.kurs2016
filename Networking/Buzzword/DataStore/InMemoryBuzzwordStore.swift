@@ -22,8 +22,8 @@ class InMemoryBuzzwordStore: BuzzwordStore {
         completion(buzzwords)
     }
     
-    func saveBuzzword(buzzword: Buzzword, completion:Buzzword -> Void) {
+    func saveBuzzword(buzzword: Buzzword, completion:() -> Void) {
         self.buzzwords[buzzword.id - 1] = buzzword
-        completion(buzzword)
+        completion()
     }
 }

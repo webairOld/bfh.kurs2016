@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		036212EA1CB2E6BB00E4046D /* WebBuzzwordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036212E91CB2E6BB00E4046D /* WebBuzzwordStore.swift */; };
 		036212EF1CB2F78400E4046D /* FakeNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036212EE1CB2F78400E4046D /* FakeNSURLSession.swift */; };
+		036212F11CB3E80100E4046D /* WebBuzzwordStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036212F01CB3E80100E4046D /* WebBuzzwordStoreTest.swift */; };
 		03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */; };
 		03D1DF721CA1A38800DCF489 /* AddBuzzwordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF711CA1A38800DCF489 /* AddBuzzwordViewController.swift */; };
 		03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF7A1CA1B76C00DCF489 /* BorderedTextView.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		036212E91CB2E6BB00E4046D /* WebBuzzwordStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBuzzwordStore.swift; sourceTree = "<group>"; };
 		036212EE1CB2F78400E4046D /* FakeNSURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNSURLSession.swift; sourceTree = "<group>"; };
+		036212F01CB3E80100E4046D /* WebBuzzwordStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebBuzzwordStoreTest.swift; sourceTree = "<group>"; };
 		03AC14681C85F39800C156A3 /* Buzzword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzzword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AC147C1C85F39800C156A3 /* BuzzwordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzwordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBuzzwordsViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				03D2320D1CA19D4D00DA7B4F /* InMemoryBuzzwordStoreTest.swift */,
+				036212F01CB3E80100E4046D /* WebBuzzwordStoreTest.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036212F11CB3E80100E4046D /* WebBuzzwordStoreTest.swift in Sources */,
 				03D232151CA19DDE00DA7B4F /* BuzzwordTest.swift in Sources */,
 				03D232141CA19DDB00DA7B4F /* InMemoryBuzzwordStoreTest.swift in Sources */,
 			);

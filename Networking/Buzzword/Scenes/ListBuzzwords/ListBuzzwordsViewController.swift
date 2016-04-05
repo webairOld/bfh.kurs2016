@@ -11,14 +11,14 @@ import UIKit
 protocol BuzzwordStore {
     func createBuzzword(word:String, completion: (Buzzword)->Void )
     func allBuzzwords(completion: [Buzzword] -> Void)
-    func saveBuzzword(buzzword: Buzzword, completion: (Buzzword) -> Void)
+    func saveBuzzword(buzzword: Buzzword, completion: () -> Void)
 }
 
 class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     @IBOutlet var buzzwordsTableView: UITableView!
     
-    var store: BuzzwordStore = InMemoryBuzzwordStore()
+    var store: BuzzwordStore = WebBuzzwordStore(session: FakeNSURLSession())
     var buzzwords = [Buzzword]()
     
     override func viewDidLoad() {
@@ -62,7 +62,7 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let buzzword = self.buzzwords[indexPath.row]
         let incrementedBuzzword = buzzword.incrementCount()
-        self.store.saveBuzzword(incrementedBuzzword) {_ in
+        self.store.saveBuzzword(incrementedBuzzword) {
             self.loadBuzzwords()
         }
 
