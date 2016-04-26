@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Buzzwords View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListBuzzwordsViewController" customModule="Buzzword" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cau-Vy-YmG">
+                                <rect key="frame" x="0.0" y="50" width="600" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raW-51-Bv7" userLabel="AddButton">
+                                <rect key="frame" x="542" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1kQ-Ty-Afr"/>
+                                    <constraint firstAttribute="height" constant="30" id="386-z9-mhQ"/>
+                                </constraints>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="tappedAddBuzzword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGx-cR-bh2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-JR-uby" userLabel="SyncButton">
+                                <rect key="frame" x="509" y="22" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="4Uo-dV-Bvb"/>
+                                    <constraint firstAttribute="height" constant="25" id="V81-HC-kcD"/>
+                                </constraints>
+                                <state key="normal" image="Refresh"/>
+                                <connections>
+                                    <action selector="syncBuzzwords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXN-4g-DUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cau-Vy-YmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5Ch-Nw-7mi"/>
+                            <constraint firstItem="mKK-JR-uby" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="Kpg-1i-7dV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="raW-51-Bv7" secondAttribute="trailing" constant="8" id="NU6-em-5HX"/>
+                            <constraint firstItem="raW-51-Bv7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="XkW-T1-7iz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cau-Vy-YmG" secondAttribute="trailing" constant="-20" id="emC-yH-neP"/>
+                            <constraint firstItem="cau-Vy-YmG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="l8E-9R-6PJ"/>
+                            <constraint firstItem="raW-51-Bv7" firstAttribute="leading" secondItem="mKK-JR-uby" secondAttribute="trailing" constant="8" id="q8U-p2-24x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cau-Vy-YmG" secondAttribute="bottom" id="uLX-I4-MFU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buzzwordsTableView" destination="cau-Vy-YmG" id="F6o-vI-TGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="264" y="351"/>
+        </scene>
+        <!--AddBuzzword-->
+        <scene sceneID="C0E-Sm-OP2">
+            <objects>
+                <viewController storyboardIdentifier="AddBuzzword" title="AddBuzzword" id="xIS-rj-hUr" customClass="AddBuzzwordViewController" customModule="Buzzword" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aT-dC-u15"/>
+                        <viewControllerLayoutGuide type="bottom" id="LkT-A6-pXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zwg-W2-yxe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Srq-b0-ADX">
+                                <rect key="frame" x="19" y="28" width="48" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hbs-Wk-aJ4"/>
+                                    <constraint firstAttribute="width" constant="48" id="yvA-L7-YcV"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="tappedCancel:" destination="xIS-rj-hUr" eventType="touchUpInside" id="XJv-fE-esv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK7-ta-aho">
+                                <rect key="frame" x="539" y="28" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="34" id="Ilh-2M-F4k"/>
+                                    <constraint firstAttribute="height" constant="30" id="Rs1-EC-dxN"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="tappedSave:" destination="xIS-rj-hUr" eventType="touchUpInside" id="asn-xA-ZBa"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bws-60-248" customClass="BorderedTextView" customModule="Buzzword" customModuleProvider="target">
+                                <rect key="frame" x="19" y="70" width="561" height="61"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Zms-dQ-UYs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cK7-ta-aho" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="8" id="3Sz-ac-ePe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bws-60-248" secondAttribute="trailing" id="5Ce-dQ-QDP"/>
+                            <constraint firstItem="Srq-b0-ADX" firstAttribute="leading" secondItem="Zwg-W2-yxe" secondAttribute="leadingMargin" constant="-1" id="JXl-2C-oEy"/>
+                            <constraint firstItem="bws-60-248" firstAttribute="leading" secondItem="Zwg-W2-yxe" secondAttribute="leadingMargin" constant="-1" id="QMQ-ip-NeD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cK7-ta-aho" secondAttribute="trailing" constant="7" id="wbt-ge-Nhu"/>
+                            <constraint firstItem="bws-60-248" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="50" id="xgX-tT-jq8"/>
+                            <constraint firstItem="Srq-b0-ADX" firstAttribute="top" secondItem="8aT-dC-u15" secondAttribute="bottom" constant="8" id="ymJ-0n-DmY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="bws-60-248" id="hqd-6c-s4j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQn-T8-PT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="351"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Refresh" width="25" height="25"/>
+    </resources>
+</document>
