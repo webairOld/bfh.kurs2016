@@ -11,6 +11,9 @@
 		031CFB421CC69A9F0073CD88 /* BuzzwordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB411CC69A9F0073CD88 /* BuzzwordAPI.swift */; };
 		031CFB451CC69AF60073CD88 /* BuzzwordAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB441CC69AF60073CD88 /* BuzzwordAPITest.swift */; };
 		031CFB471CC69BD90073CD88 /* BuzzwordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB461CC69BD90073CD88 /* BuzzwordStore.swift */; };
+		0364D6B91CCFD52E0085491D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0364D6B71CCFD52E0085491D /* Model.xcdatamodeld */; };
+		0364D6BC1CCFD5410085491D /* BuzzwordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364D6BA1CCFD5410085491D /* BuzzwordEntity+CoreDataProperties.swift */; };
+		0364D6BD1CCFD5410085491D /* BuzzwordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0364D6BB1CCFD5410085491D /* BuzzwordEntity.swift */; };
 		036B36261CCF7C2600E13F40 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36251CCF7C2600E13F40 /* APIConnector.swift */; };
 		036B36281CCF7C7D00E13F40 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36271CCF7C7D00E13F40 /* APIResult.swift */; };
 		036B362A1CCF86BD00E13F40 /* WebserviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36291CCF86BD00E13F40 /* WebserviceStore.swift */; };
@@ -47,6 +50,9 @@
 		031CFB411CC69A9F0073CD88 /* BuzzwordAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordAPI.swift; sourceTree = "<group>"; };
 		031CFB441CC69AF60073CD88 /* BuzzwordAPITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordAPITest.swift; sourceTree = "<group>"; };
 		031CFB461CC69BD90073CD88 /* BuzzwordStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordStore.swift; sourceTree = "<group>"; };
+		0364D6B81CCFD52E0085491D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		0364D6BA1CCFD5410085491D /* BuzzwordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BuzzwordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0364D6BB1CCFD5410085491D /* BuzzwordEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordEntity.swift; sourceTree = "<group>"; };
 		036B36251CCF7C2600E13F40 /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
 		036B36271CCF7C7D00E13F40 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
 		036B36291CCF86BD00E13F40 /* WebserviceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceStore.swift; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 		036B362D1CCFB44E00E13F40 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				0364D6BA1CCFD5410085491D /* BuzzwordEntity+CoreDataProperties.swift */,
+				0364D6BB1CCFD5410085491D /* BuzzwordEntity.swift */,
+				0364D6B71CCFD52E0085491D /* Model.xcdatamodeld */,
 				036B36351CCFB54300E13F40 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -368,14 +377,17 @@
 				03D2320A1CA19D4300DA7B4F /* Buzzword.swift in Sources */,
 				036B36281CCF7C7D00E13F40 /* APIResult.swift in Sources */,
 				036B36261CCF7C2600E13F40 /* APIConnector.swift in Sources */,
+				0364D6BC1CCFD5410085491D /* BuzzwordEntity+CoreDataProperties.swift in Sources */,
 				036B36361CCFB54300E13F40 /* CoreDataStack.swift in Sources */,
 				031CFB421CC69A9F0073CD88 /* BuzzwordAPI.swift in Sources */,
 				03D232071CA19D4300DA7B4F /* BuzzwordInMemoryStore.swift in Sources */,
 				03D232031CA19D4300DA7B4F /* AppDelegate.swift in Sources */,
+				0364D6B91CCFD52E0085491D /* Model.xcdatamodeld in Sources */,
 				036B362A1CCF86BD00E13F40 /* WebserviceStore.swift in Sources */,
 				03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */,
 				031CFB471CC69BD90073CD88 /* BuzzwordStore.swift in Sources */,
 				03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */,
+				0364D6BD1CCFD5410085491D /* BuzzwordEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +594,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0364D6B71CCFD52E0085491D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0364D6B81CCFD52E0085491D /* Model.xcdatamodel */,
+			);
+			currentVersion = 0364D6B81CCFD52E0085491D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03AC14601C85F39800C156A3 /* Project object */;
 }
