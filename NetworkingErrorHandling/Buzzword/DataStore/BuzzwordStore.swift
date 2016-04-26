@@ -9,7 +9,7 @@
 import Foundation
 
 protocol BuzzwordStore {
-    func createBuzzword(word:String) -> Buzzword
     func allBuzzwords() -> [Buzzword]
     func saveBuzzword(buzzword: Buzzword)
+    func syncBuzzwords(buzzwords: [Buzzword])
 }

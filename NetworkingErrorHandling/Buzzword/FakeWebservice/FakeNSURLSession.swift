@@ -19,11 +19,27 @@ class FakeNSURLSession: NSURLSession {
 }
 
 class BuzzwordDataTask: NSURLSessionDataTask {
-    static let store = InMemoryBuzzwordStore()
+    static var requestCount = 0
     var request: NSURLRequest!
     var completionHandler: ((NSData?, NSURLResponse?, NSError?) -> Void)?
     
     override func resume() {
+        
+        BuzzwordDataTask.requestCount += 1
+        
+        if (BuzzwordDataTask.requestCount % 3 == 0) {
+            // server error
+            let response = NSHTTPURLResponse(URL: self.request!.URL!, statusCode: 500, HTTPVersion: nil, headerFields: nil)!
+            let data = "Server Error".dataUsingEncoding(NSUTF8StringEncoding)
+            self.completionHandler?(data, response, nil)
+            return
+        }
+        
+        if (BuzzwordDataTask.requestCount % 5 == 0) {
+            // network error
+            self.completionHandler?(nil, nil, NSError(domain: "NSURLErrorDomain", code: NSURLErrorNetworkConnectionLost, userInfo: nil))
+            return
+        }
         
         if self.request.URL?.absoluteString == "https://buzzword.com/buzzwords" {
             if self.request.HTTPMethod == "GET" {
@@ -63,7 +79,7 @@ class BuzzwordDataTask: NSURLSessionDataTask {
     }
     
     func create(body:[String:String]) {
-        let store = BuzzwordDataTask.store
+        let store = WebserviceStore()
         let buzzword = store.createBuzzword(body["name"]!)
         let response = NSHTTPURLResponse(URL: self.request!.URL!, statusCode: 201, HTTPVersion: nil, headerFields: nil)!
         let data = try! NSJSONSerialization.dataWithJSONObject(["id":buzzword.id, "name":buzzword.name, "count":buzzword.count], options:NSJSONWritingOptions(rawValue: 0))
@@ -71,7 +87,7 @@ class BuzzwordDataTask: NSURLSessionDataTask {
     }
     
     func update(body:[String:AnyObject]) {
-        let store = BuzzwordDataTask.store
+        let store = WebserviceStore()
         let buzzword = Buzzword(id:body["id"] as! Int , name: body["name"] as! String, count: body["count"] as! Int)
         store.saveBuzzword(buzzword)
         let response = NSHTTPURLResponse(URL: self.request!.URL!, statusCode: 204, HTTPVersion: nil, headerFields: nil)!
@@ -79,7 +95,7 @@ class BuzzwordDataTask: NSURLSessionDataTask {
     }
     
     func list() {
-        let store = BuzzwordDataTask.store
+        let store = WebserviceStore()
         let buzzwords = store.allBuzzwords()
         var buzzwordResponse = [[String:AnyObject]]()
         for b in buzzwords {

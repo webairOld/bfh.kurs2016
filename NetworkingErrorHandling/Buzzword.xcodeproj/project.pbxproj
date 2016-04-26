@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		031CFB3F1CC699F60073CD88 /* FakeNSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB3E1CC699F60073CD88 /* FakeNSURLSession.swift */; };
 		031CFB421CC69A9F0073CD88 /* BuzzwordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB411CC69A9F0073CD88 /* BuzzwordAPI.swift */; };
-		031CFB451CC69AF60073CD88 /* BuzzwordAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB441CC69AF60073CD88 /* BuzzwordAPI.swift */; };
+		031CFB451CC69AF60073CD88 /* BuzzwordAPITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB441CC69AF60073CD88 /* BuzzwordAPITest.swift */; };
 		031CFB471CC69BD90073CD88 /* BuzzwordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031CFB461CC69BD90073CD88 /* BuzzwordStore.swift */; };
+		036B36261CCF7C2600E13F40 /* APIConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36251CCF7C2600E13F40 /* APIConnector.swift */; };
+		036B36281CCF7C7D00E13F40 /* APIResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36271CCF7C7D00E13F40 /* APIResult.swift */; };
+		036B362A1CCF86BD00E13F40 /* WebserviceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036B36291CCF86BD00E13F40 /* WebserviceStore.swift */; };
 		03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */; };
 		03D1DF721CA1A38800DCF489 /* AddBuzzwordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF711CA1A38800DCF489 /* AddBuzzwordViewController.swift */; };
 		03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D1DF7A1CA1B76C00DCF489 /* BorderedTextView.swift */; };
@@ -37,8 +40,11 @@
 /* Begin PBXFileReference section */
 		031CFB3E1CC699F60073CD88 /* FakeNSURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeNSURLSession.swift; sourceTree = "<group>"; };
 		031CFB411CC69A9F0073CD88 /* BuzzwordAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordAPI.swift; sourceTree = "<group>"; };
-		031CFB441CC69AF60073CD88 /* BuzzwordAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordAPI.swift; sourceTree = "<group>"; };
+		031CFB441CC69AF60073CD88 /* BuzzwordAPITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordAPITest.swift; sourceTree = "<group>"; };
 		031CFB461CC69BD90073CD88 /* BuzzwordStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzwordStore.swift; sourceTree = "<group>"; };
+		036B36251CCF7C2600E13F40 /* APIConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConnector.swift; sourceTree = "<group>"; };
+		036B36271CCF7C7D00E13F40 /* APIResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResult.swift; sourceTree = "<group>"; };
+		036B36291CCF86BD00E13F40 /* WebserviceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceStore.swift; sourceTree = "<group>"; };
 		03AC14681C85F39800C156A3 /* Buzzword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buzzword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AC147C1C85F39800C156A3 /* BuzzwordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuzzwordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D1DF6F1CA1A35E00DCF489 /* ListBuzzwordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBuzzwordsViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				031CFB3E1CC699F60073CD88 /* FakeNSURLSession.swift */,
+				036B36291CCF86BD00E13F40 /* WebserviceStore.swift */,
 			);
 			path = FakeWebservice;
 			sourceTree = "<group>";
@@ -86,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				031CFB411CC69A9F0073CD88 /* BuzzwordAPI.swift */,
+				036B36251CCF7C2600E13F40 /* APIConnector.swift */,
+				036B36271CCF7C7D00E13F40 /* APIResult.swift */,
 			);
 			path = Webservice;
 			sourceTree = "<group>";
@@ -93,7 +102,7 @@
 		031CFB431CC69AF60073CD88 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
-				031CFB441CC69AF60073CD88 /* BuzzwordAPI.swift */,
+				031CFB441CC69AF60073CD88 /* BuzzwordAPITest.swift */,
 			);
 			path = Webservice;
 			sourceTree = "<group>";
@@ -324,9 +333,12 @@
 				031CFB3F1CC699F60073CD88 /* FakeNSURLSession.swift in Sources */,
 				03D1DF721CA1A38800DCF489 /* AddBuzzwordViewController.swift in Sources */,
 				03D2320A1CA19D4300DA7B4F /* Buzzword.swift in Sources */,
+				036B36281CCF7C7D00E13F40 /* APIResult.swift in Sources */,
+				036B36261CCF7C2600E13F40 /* APIConnector.swift in Sources */,
 				031CFB421CC69A9F0073CD88 /* BuzzwordAPI.swift in Sources */,
 				03D232071CA19D4300DA7B4F /* InMemoryBuzzwordStore.swift in Sources */,
 				03D232031CA19D4300DA7B4F /* AppDelegate.swift in Sources */,
+				036B362A1CCF86BD00E13F40 /* WebserviceStore.swift in Sources */,
 				03D1DF7B1CA1B76C00DCF489 /* BorderedTextView.swift in Sources */,
 				031CFB471CC69BD90073CD88 /* BuzzwordStore.swift in Sources */,
 				03D1DF701CA1A35E00DCF489 /* ListBuzzwordsViewController.swift in Sources */,
@@ -337,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031CFB451CC69AF60073CD88 /* BuzzwordAPI.swift in Sources */,
+				031CFB451CC69AF60073CD88 /* BuzzwordAPITest.swift in Sources */,
 				03D232151CA19DDE00DA7B4F /* BuzzwordTest.swift in Sources */,
 				03D232141CA19DDB00DA7B4F /* InMemoryBuzzwordStoreTest.swift in Sources */,
 			);

@@ -10,11 +10,13 @@ import UIKit
 
 class AddBuzzwordViewController: UIViewController {
     
-    var store: BuzzwordStore!
+    let webservice = BuzzwordAPI(connector: APIConnector())
+    let store: BuzzwordStore = InMemoryBuzzwordStore()
 
     @IBOutlet var textField: BorderedTextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +26,9 @@ class AddBuzzwordViewController: UIViewController {
     @IBAction func tappedCancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     @IBAction func tappedSave(sender: AnyObject) {
-        self.store.createBuzzword(textField.text)
-        self.tappedCancel(sender)
+
     }
     
 }

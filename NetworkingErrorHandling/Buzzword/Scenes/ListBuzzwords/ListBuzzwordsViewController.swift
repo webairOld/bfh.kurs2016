@@ -13,6 +13,8 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
     @IBOutlet var buzzwordsTableView: UITableView!
     
     var store: BuzzwordStore = InMemoryBuzzwordStore()
+    let webservice = BuzzwordAPI(connector: APIConnector())
+    
     var buzzwords = [Buzzword]()
     
     override func viewDidLoad() {
@@ -30,9 +32,16 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
         self.buzzwordsTableView.reloadData()
     }
     
+    @IBAction func syncBuzzwords(sender: AnyObject) {
+        
+    }
+    
+    func saveBuzzword(buzzword:Buzzword) {
+
+    }
+    
     @IBAction func tappedAddBuzzword(sender: AnyObject) {
         let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("AddBuzzword") as! AddBuzzwordViewController
-        viewController.store = self.store
         self.presentViewController(viewController, animated: true, completion: nil)
         
     }
@@ -54,7 +63,7 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let buzzword = self.buzzwords[indexPath.row]
         let incrementedBuzzword = buzzword.incrementCount()
-        self.store.saveBuzzword(incrementedBuzzword)
-        self.loadBuzzwords()
+        self.saveBuzzword(incrementedBuzzword)
+
     }
 }
