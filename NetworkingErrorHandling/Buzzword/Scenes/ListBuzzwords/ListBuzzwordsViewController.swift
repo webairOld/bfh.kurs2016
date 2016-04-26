@@ -33,11 +33,31 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
     }
     
     @IBAction func syncBuzzwords(sender: AnyObject) {
-        
+        self.webservice.allBuzzwords() { result in
+            switch(result) {
+            case .Success(let remoteBuzzwords):
+                self.store.syncBuzzwords(remoteBuzzwords)
+                self.loadBuzzwords()
+            case .Failure(let errorMessage):
+                self.displayAlertWithMessage(errorMessage)
+            case .NetworkError:
+                self.displayAlertWithMessage("Network Error, please try again")
+            }
+        }
     }
     
     func saveBuzzword(buzzword:Buzzword) {
-
+        self.webservice.saveBuzzword(buzzword) { result in
+            switch(result) {
+            case .Success:
+                self.store.saveBuzzword(buzzword)
+                self.loadBuzzwords()
+            case .Failure(let errorMessage):
+                self.displayAlertWithMessage(errorMessage)
+            case .NetworkError:
+                self.displayAlertWithMessage("Network Error, please try again")
+            }
+        }
     }
     
     @IBAction func tappedAddBuzzword(sender: AnyObject) {
@@ -45,9 +65,17 @@ class ListBuzzwordsViewController: UIViewController,UITableViewDataSource,UITabl
         self.presentViewController(viewController, animated: true, completion: nil)
         
     }
+    
+    func displayAlertWithMessage(message:String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+        self.presentViewController(alert, animated: false, completion: nil)
+    }
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.buzzwords.count
     }
