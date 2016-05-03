@@ -28,7 +28,16 @@ class AddBuzzwordViewController: UIViewController {
     }
     
     @IBAction func tappedSave(sender: AnyObject) {
-
+        webservice.createBuzzword("Hallo Welt") {result in
+            switch(result) {
+                case .Success(let buzzword):
+                    print("Success")
+                case .Failure(let errorMessage):
+                    print(errorMessage)
+                case .NetworkError:
+                    print("network error")
+            }
+        }
     }
     
 }
